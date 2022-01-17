@@ -1,0 +1,17 @@
+.eggs/*
+.*.swp
+*~
+*.py[co]
+.coverage
+test_elasticsearch/cover
+test_elasticsearch/local.py
+docs/_build
+elasticsearch.egg-info
+.tox
+.noseids
+dist
+*.egg
+coverage.xml
+nosetests.xml
+junit-*.xml
+build

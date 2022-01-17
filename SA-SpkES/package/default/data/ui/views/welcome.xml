@@ -1,0 +1,40 @@
+<form version="1.1">
+    <label>Welcome</label>
+    <description></description>
+    <row>
+        <panel>
+            <html>
+                <h1>在Splunk中检索Elasticsearch</h1>
+
+                <h2>essearch</h2>
+                <p>
+                    直接检索Elasticsearch
+                </p>
+                <pre>
+                    | essearch index="logstash-2015*" query="response:200"
+                </pre>
+
+                <h2>eslookup</h2>
+                <p>
+                    基于上下文检索
+                </p>
+
+                <pre>
+                    | makeresults
+                    | eval q="POINS"
+                    | eslookup domain=default index=shakesp* query="speaker:{q}"
+                </pre>
+
+                <pre>
+                    | makeresults
+                    | eval q="POINS"
+                    | append
+                        [ makeresults
+                        | eval q="FALSTAFF" ]
+                    | stats values(q) as q
+                    | eslookup domain=default index=shakesp* query="speaker:{q}"
+                </pre>
+            </html>
+        </panel>
+    </row>
+</form>
