@@ -59,7 +59,7 @@ SA-SpkES核心有两个命令：
 ```
 `index` 和`query`分别对应着Elasticsearch中的Index和`query_string`的检索语句。
 
-![essearch](C:\<MUST_BE_REPLACE_AFTER_FIRST_COMMIT>\essearch.png)
+![essearch](https://raw.githubusercontent.com/chiww/SA-SpkES/main/README/essearch.png)
 
 **eslookup**
 
@@ -73,7 +73,7 @@ SA-SpkES核心有两个命令：
 
 `eslookup`是自定义命令，这个SPL语句中除最后一行外，其余前面几行可以看成是`eslookup`的上文信息。例如该实例中，`q`这个字段的值是前一个搜素语句的结果，该结果可以作为`eslookup`这个命令`query`参数的补充，填充到Elasticsearch`query_string`的检索语句中。
 
-![eslookup01](C:\<MUST_BE_REPLACE_AFTER_FIRST_COMMIT>\eslookup01.PNG)
+![eslookup01](https://raw.githubusercontent.com/chiww/SA-SpkES/main/README/eslookup01.PNG)
 
 也可以是填充多个值，例如如下这样的SPL:
 
@@ -87,7 +87,7 @@ SA-SpkES核心有两个命令：
 | eslookup index=shakesp* query="speaker:{q}"
 ```
 
-![eslookup02](C:\<MUST_BE_REPLACE_AFTER_FIRST_COMMIT>\eslookup02.PNG)
+![eslookup02](https://raw.githubusercontent.com/chiww/SA-SpkES/main/README/eslookup02.PNG)
 
 
 ## 关于
